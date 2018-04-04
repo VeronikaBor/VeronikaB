@@ -1,10 +1,10 @@
 -- Fråga 1: Vilka filmer som firman äger, inklusive data om filmen.
 
-SELECT * FROM products;
+SELECT * FROM movie_collection;
 
 -- Fråga 2: Vilka filmer som finns i en viss genre.
 
-SELECT * FROM products;
+SELECT * FROM genre_movies;
 
 -- Fråga : Vilka filmer som är uthyrda, vem som hyrde dem (kund) och vem som hyrde ut dem (anställd).
 
