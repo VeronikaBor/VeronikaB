@@ -27,7 +27,7 @@ CREATE TABLE `actors` (
   `firstName` varchar(45) NOT NULL,
   `lastName` varchar(45) NOT NULL,
   PRIMARY KEY (`actor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `actors` (
 
 LOCK TABLES `actors` WRITE;
 /*!40000 ALTER TABLE `actors` DISABLE KEYS */;
-INSERT INTO `actors` VALUES (1,'Alicia','Vikander'),(2,'Krysten','Ritter'),(3,'Robert','Downey Jr.'),(4,'Chris','Evens'),(5,'Mark','Ruffalo'),(6,'Chris','Hemsworth'),(7,'Scarlett','Johansson'),(8,'Cobie','Smulders'),(9,'Stellan','Skarsgård'),(10,'Samuel L.','Jackson'),(11,'Gwyneth','Paltrow'),(12,'Jennifer','Lawrence'),(13,'Rose','Byrne'),(14,'Michael','Fassbender'),(15,'Hugh','Jackman'),(16,'Ryan','Renolds'),(17,'Leonardo','DiCaprio'),(18,'Kate','Hudson');
+INSERT INTO `actors` VALUES (1,'Alicia','Vikander'),(2,'Krysten','Ritter'),(3,'Robert','Downey Jr.'),(4,'Chris','Evens'),(5,'Mark','Ruffalo'),(6,'Chris','Hemsworth'),(7,'Scarlett','Johansson'),(8,'Cobie','Smulders'),(9,'Stellan','Skarsgård'),(10,'Samuel L.','Jackson'),(11,'Gwyneth','Paltrow'),(12,'Jennifer','Lawrence'),(13,'Rose','Byrne'),(14,'Michael','Fassbender'),(15,'Hugh','Jackman'),(16,'Ryan','Renolds'),(17,'Leonardo','DiCaprio'),(18,'Kate','Hudson'),(19,'Ryan','Gossling'),(20,'Emma','Stone'),(21,'Steve','Carell'),(22,'Christian','Bale'),(23,'Brad','Pitt'),(24,'Jason','Segel'),(25,'Tim','Robbins'),(26,'Morgan','Freeman'),(27,'Liam','Neeson'),(28,'Edward','Norton'),(29,'Matthew','McConaughey'),(30,'Anne','Hathaway'),(31,'Damon ','Wayans Jr'),(32,'Ryan','Potter'),(33,'Hugh','Grant'),(34,'Julia','Roberts');
 /*!40000 ALTER TABLE `actors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,7 +88,7 @@ CREATE TABLE `customers` (
   KEY `fk_customers_employees1_idx` (`employees_id`),
   CONSTRAINT `fk_customers_address1` FOREIGN KEY (`address_id`) REFERENCES `address` (`address_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_customers_employees1` FOREIGN KEY (`employees_id`) REFERENCES `employees` (`employees_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +97,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Eva','Larsson','eva.larsson@gmail.com','070-6780943','760403-1978',3,5),(2,'Kalle','Svensson','kalle.svensson@gmail.com','070-5867403','550918-4502',19,3),(3,'Per','Larsson','per.lasson@hotmail.com','070-3209856','840310-3420',20,4),(4,'Stina','Andersson','stina.andersson@hotmail.com','070-0973415','620419-4501',26,7),(5,'David','Holmlund','david.holmlund@yahoo.com','070-3409863','790627-5038',23,9),(6,'Dennis','Granath','d.granath@office.se','070-3209865','940203-5749',24,6),(7,'Roger','Brunh','roger.b@telia.se','070-2109873','871130-2320',28,9),(8,'Jennifer','Jansson','jennifer.jansson@gmail.com','070-0033998','531231-1456',5,9),(9,'Annie','Öberg','a.oberg@hotmail.com','070-1086643','760826-4365',10,3),(10,'Anette','Öberg','nettan_o@mail.nu','070-2109810','840513-2425',6,5),(11,'Fredrik','Karlsson','karlsson86@gmail.com','070-0011338','860914-1013',6,5),(12,'Kim','Johansson','kimpa1975@hotmail.com','070-0984326','750302-1439',4,7),(13,'Lina','Johansson','linajohansson_76@yahoo.com','070-4397564','760914-5498',7,7),(14,'Lilian','Lundblad','lilian1963Lundblad@gmail.com','070-2340942','630124-2301',4,6),(15,'Gun','Ljungqvist','gunnsan74@mail.nu','073-2301435','741023-0931',15,9),(16,'Ingvar','Karlström','ingvar.karlström@gmail.com','073-0951437','701205-4078',15,4),(17,'Sanna','Muhic','sanna.muhic@hotmail.com','072-0998322','911004-5023',11,7),(18,'Mirza','Kalludra','Kalludra.m@gmail.com','072-4409493','920930-3402',3,9),(19,'Dino','Muhic','Dino1958@hotmail.com','070-4238972','580423-2454',11,4);
+INSERT INTO `customers` VALUES (1,'Eva','Larsson','eva.larsson@gmail.com','070-6780943','760403-1978',3,5),(2,'Kalle','Svensson','kalle.svensson@gmail.com','070-5867403','550918-4502',19,3),(3,'Per','Larsson','per.lasson@hotmail.com','070-3209856','840310-3420',20,4),(4,'Stina','Andersson','stina.andersson@hotmail.com','070-0973415','620419-4501',26,7),(5,'David','Holmlund','david.holmlund@yahoo.com','070-3409863','790627-5038',23,9),(6,'Dennis','Granath','d.granath@office.se','070-3209865','940203-5749',24,6),(7,'Roger','Brunh','roger.b@telia.se','070-2109873','871130-2320',28,9),(8,'Jennifer','Jansson','jennifer.jansson@gmail.com','070-0033998','531231-1456',5,9),(9,'Annie','Öberg','a.oberg@hotmail.com','070-1086643','760826-4365',10,3),(10,'Anette','Öberg','nettan_o@mail.nu','070-2109810','840513-2425',6,5),(11,'Fredrik','Karlsson','karlsson86@gmail.com','070-0011338','860914-1013',6,5),(12,'Kim','Johansson','kimpa1975@hotmail.com','070-0984326','750302-1439',4,7),(13,'Lina','Johansson','linajohansson_76@yahoo.com','070-4397564','760914-5498',7,7),(14,'Lilian','Lundblad','lilian1963Lundblad@gmail.com','070-2340942','630124-2301',4,6),(15,'Gun','Ljungqvist','gunnsan74@mail.nu','073-2301435','741023-0931',15,9),(16,'Ingvar','Karlström','ingvar.karlström@gmail.com','073-0951437','701205-4078',15,4),(17,'Sanna','Muhic','sanna.muhic@hotmail.com','072-0998322','911004-5023',11,7),(18,'Mirza','Kalludra','Kalludra.m@gmail.com','072-4409493','920930-3402',3,9),(19,'Dino','Muhic','Dino1958@hotmail.com','070-4238972','580423-2454',11,4),(20,'Jessica','Danielsson','j.danielsson@outlook.se','073-5672898','930210-2426',29,5),(21,'Andreas','Svensson','andreas.svensson@yahoo.com','072-4560203','850315-4587',2,6),(22,'Lars','Fredriksson','lars.fredrik@hotmail.com','073-2357698','670516-3497',8,3),(23,'Denise','Hansson','denise_hansson@gmail.com','070-8904536','780402-0430',9,7),(24,'Anne','Karlberg','anne.karlberg@mail.com','070-4590323','891225-7803',12,9),(25,'Ronny','Otterborg','r_otterborg@hotmail.com','070-0034854','771030-3476',13,6),(26,'Tonny','Öberg','tonny83oberg@gmail.com','070-0312432','830808-4509',14,7),(27,'Christian','Sjöberg','christina_sjoberg@yahoo.se','070-3098565','730706-1023',16,9),(28,'Sara','Hjalmarsson','hjalmarsson76@gmail.com','070-2095463','761118-2309',17,3),(29,'Sophie','Kronlund','s_kronlund@hotmail.com','070-1005544','831113-2024',18,4),(30,'Isabelle','Börjesson','isabella84borjesson@gmail.com','070-9994599','710606-2026',21,5),(31,'Lovisa','Granqvist','lovisa.granqvist@mail.com','070-8833550','700123-2826',22,7),(32,'Frida','Ljungström','frida96ljungstrom@yahoo.com','070-7733254','680423-2628',25,9),(33,'Margareta','Scheelin','margareta.scheelin@hotmail.com','072-0123654','650914-2428',27,3);
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +113,7 @@ CREATE TABLE `directors` (
   `firstName` varchar(45) NOT NULL,
   `lastName` varchar(45) NOT NULL,
   PRIMARY KEY (`director_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `directors` (
 
 LOCK TABLES `directors` WRITE;
 /*!40000 ALTER TABLE `directors` DISABLE KEYS */;
-INSERT INTO `directors` VALUES (1,'Gavin','Hood'),(2,'Joss','Whedon'),(3,'Gary','Ross'),(4,'David','Russell'),(5,'Tim','Miller'),(6,'David','Soren'),(7,'Kirk','De Micco'),(8,'Martin','Campbell'),(9,'Quentin','Tarantino'),(10,'Steven','Spielberg'),(11,'James','Cameron'),(12,'Tim','Burton'),(13,'Lasse','Hallberg'),(14,'Christopher','Nolan'),(15,'Fisher','Stevens');
+INSERT INTO `directors` VALUES (1,'Gus','Van Sant'),(2,'Joss','Whedon'),(3,'Gary','Ross'),(4,'Roger','Michell'),(5,'Tim','Miller'),(6,'David','Soren'),(7,'Guy','Ritchie'),(8,'Spike','Jonze'),(9,'Damien','Chazelle'),(10,'Steven','Spielberg'),(11,'James','Cameron'),(12,'Donald','Petrie'),(13,'Mark','Webb'),(14,'Christopher','Nolan'),(15,'Tom','Hooper'),(16,'Don','Hall'),(17,'Adam','McKay'),(18,'Martin','Scorsese'),(19,'Frank','Darabont'),(20,'David','Fincher'),(21,'Tony','Kaye'),(22,'Pierre','Coffin'),(23,'Jon','Favreau'),(24,'Anthony','Russo'),(25,'Joe','Russo'),(26,'Garth','Jennings'),(27,'Christophe','Lourdelet'),(28,'Bryan','Singer'),(29,'Derek','Cianfrance'),(30,'Janus','Mets'),(31,'Glenn','Ficarra'),(32,'John','Requa'),(33,'Don','Hall'),(34,'Chris','Williams'),(35,'Peter','Howitt'),(36,'David','Russell');
 /*!40000 ALTER TABLE `directors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -168,7 +168,7 @@ CREATE TABLE `genre` (
   `genre_id` int(11) NOT NULL AUTO_INCREMENT,
   `genre` varchar(45) NOT NULL,
   PRIMARY KEY (`genre_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -177,7 +177,7 @@ CREATE TABLE `genre` (
 
 LOCK TABLES `genre` WRITE;
 /*!40000 ALTER TABLE `genre` DISABLE KEYS */;
-INSERT INTO `genre` VALUES (1,'Comedies'),(2,'Romance'),(3,'Action'),(4,'Animation'),(5,'Drama'),(6,'Sci-fi'),(7,'Crime');
+INSERT INTO `genre` VALUES (1,'Comedy'),(2,'Romance'),(3,'Action'),(4,'Animation'),(5,'Drama'),(6,'Sci-fi'),(7,'Crime'),(8,'Adventure'),(9,'Fantasy'),(10,'Biography'),(11,'Thriller'),(12,'Music');
 /*!40000 ALTER TABLE `genre` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,20 +192,11 @@ CREATE TABLE `movies` (
   `movie_id` int(11) NOT NULL AUTO_INCREMENT,
   `movieName` varchar(45) NOT NULL,
   `releaseYear` year(4) NOT NULL,
-  `genre_id` int(11) NOT NULL,
-  `actor_id` int(11) NOT NULL,
-  `director_id` int(11) NOT NULL,
-  `description` varchar(45) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
   `rentalTime` int(11) NOT NULL,
-  `InStock` int(11) DEFAULT NULL,
-  PRIMARY KEY (`movie_id`),
-  KEY `fk_movies_genre1_idx` (`genre_id`),
-  KEY `fk_movies_directors1_idx` (`director_id`),
-  KEY `fk_movies_actors1_idx` (`actor_id`),
-  CONSTRAINT `fk_movies_actors1` FOREIGN KEY (`actor_id`) REFERENCES `actors` (`actor_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_movies_directors1` FOREIGN KEY (`director_id`) REFERENCES `directors` (`director_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_movies_genre1` FOREIGN KEY (`genre_id`) REFERENCES `genre` (`genre_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+  `inStock` int(11) NOT NULL,
+  PRIMARY KEY (`movie_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -214,8 +205,92 @@ CREATE TABLE `movies` (
 
 LOCK TABLES `movies` WRITE;
 /*!40000 ALTER TABLE `movies` DISABLE KEYS */;
-INSERT INTO `movies` VALUES (1,'IronMan',2010,6,3,3,'IronMan fighting agains bad creatures',4,10),(2,'Sliding Doors',1998,5,11,2,'Ramantic movie about how two people meet',4,15),(3,'Avengers',2012,6,3,10,'A couple of Heros Fighting',4,20),(4,'The Danish Girl',2015,5,1,7,'Boy becomes girl',4,10),(35,'Captain America',2016,3,4,6,'A strong Captain against the world',4,20),(36,'Titanic',1997,2,17,14,'Sinking ship',4,30),(37,'Hunger Games',2012,6,12,12,'young kids forced to war on each other',4,10),(38,'Silver linings',2012,2,12,4,'Boy meets girl',4,15),(39,'The Wolf of Wallstreet',2013,1,17,7,'rich man throwing money around him',4,30),(40,'How to Lose a guy in 10 Days',2016,1,18,6,'How to Lose a guy in 10 Days',4,10),(41,'Gifted',2017,5,13,8,NULL,4,20),(42,'Sherlock Holmes',2009,7,3,3,'Crime master',4,10),(43,'Her',2013,5,7,2,'How to become friends with a voice',4,15),(44,'Sing',2016,4,7,4,'Singing animals',4,20),(45,'Deadpool',2014,3,16,9,'Guy in red suit',4,10),(46,'X-men',2001,6,15,10,'Guy with metal claws',4,20),(47,'Turbo',2013,4,10,15,'racing snail',4,25),(48,'Light between oceans',2016,2,14,11,'Romance between a lighthouse',4,30),(49,'Good Will Hunting',1997,5,6,7,'Oh captain my captain',4,15),(50,'Borg',2017,5,9,2,'Tennis in the 80`s',4,20);
+INSERT INTO `movies` VALUES (1,'IronMan',2010,'IronMan fighting agains bad creatures',4,10),(2,'Sliding Doors',1998,'Ramantic movie about how two people meet',4,15),(3,'Avengers',2012,'A couple of Heros Fighting',4,20),(4,'The Danish Girl',2015,'Boy becomes girl',4,10),(35,'Captain America',2016,'A strong Captain against the world',4,20),(36,'Titanic',1997,'Sinking ship',4,30),(37,'Hunger Games',2012,'young kids forced to war on each other',4,10),(38,'Silver linings',2012,'Boy meets girl',4,15),(39,'The Wolf of Wallstreet',2013,'rich man throwing money around him',4,30),(40,'How to Lose a guy in 10 Days',2016,'How to Lose a guy in 10 Days',4,10),(41,'Gifted',2017,NULL,4,20),(42,'Sherlock Holmes',2009,'Crime master',4,10),(43,'Her',2013,'How to become friends with a voice',4,15),(44,'Sing',2016,'Singing animals',4,20),(45,'Deadpool',2014,'Guy in red suit',4,10),(46,'X-men: Days of Future Past',2014,'Guy with metal claws and friends',4,20),(47,'Turbo',2013,'racing snail',4,25),(48,'Light between oceans',2016,'Romance between a lighthouse',4,30),(49,'Good Will Hunting',1997,'Oh captain my captain',4,15),(50,'Borg',2017,'Tennis in the 80`s',4,20),(56,'Notting hill',1999,'bookstore owner meet the world`s most best-liked actress ',4,20),(57,'The Shawshank Redemption',1994,'Story of a American banker who finds himself to be an inmate for a crime he didn`t commit ',4,10),(58,'Schindler`s List',1993,'German greedy businessman who becomes an unlikely humanitarian',4,15),(59,'Fight Club',1999,'Underground fighting',4,15),(60,'Intersteller',2014,'Lost in space trying to save the human race',4,20),(61,'Big Hero 6',2014,'A good friend in need',4,10),(62,'Despicable Me',2010,'A lot of Minions',4,30),(63,'The Big Short',2015,'The true story of a handful of investors who bet against the US mortgage market in 2006-7',4,15),(64,'Crazy Stupid Love',2011,'A middle-aged husband`s life changes dramatically when his wife asks him for a divorce',4,10),(65,'La La Land',2016,'A musical with a lot of singing and dancing',4,30),(66,'American History X',1998,'A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did',4,10),(67,'Batman Begins',2005,'The story of the billionaire playboy Bruce Wayne',4,30);
 /*!40000 ALTER TABLE `movies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `movies_actors`
+--
+
+DROP TABLE IF EXISTS `movies_actors`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `movies_actors` (
+  `movie_id` int(11) NOT NULL,
+  `actor_id` int(11) NOT NULL,
+  PRIMARY KEY (`movie_id`,`actor_id`),
+  KEY `fk_movies_has_actors_actors1_idx` (`actor_id`),
+  KEY `fk_movies_has_actors_movies1_idx` (`movie_id`),
+  CONSTRAINT `fk_movies_has_actors_actors1` FOREIGN KEY (`actor_id`) REFERENCES `actors` (`actor_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_movies_has_actors_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movies_actors`
+--
+
+LOCK TABLES `movies_actors` WRITE;
+/*!40000 ALTER TABLE `movies_actors` DISABLE KEYS */;
+INSERT INTO `movies_actors` VALUES (4,1),(48,1),(1,3),(3,3),(35,3),(42,3),(3,4),(35,4),(41,4),(3,5),(3,6),(3,7),(43,7),(44,7),(3,8),(3,9),(49,9),(50,9),(3,10),(47,10),(1,11),(2,11),(3,11),(37,12),(38,12),(46,12),(46,14),(48,14),(46,15),(45,16),(47,16),(36,17),(39,17),(40,18),(63,19),(64,19),(65,19),(64,20),(65,20),(62,21),(63,21),(64,21),(63,22),(67,22),(59,23),(63,23),(62,24),(57,25),(57,26),(58,27),(67,27),(59,28),(66,28),(40,29),(44,29),(60,29),(60,30),(61,31),(61,32),(56,33),(56,34);
+/*!40000 ALTER TABLE `movies_actors` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `movies_directors`
+--
+
+DROP TABLE IF EXISTS `movies_directors`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `movies_directors` (
+  `movie_id` int(11) NOT NULL,
+  `director_id` int(11) NOT NULL,
+  PRIMARY KEY (`movie_id`,`director_id`),
+  KEY `fk_movies_has_directors_directors1_idx` (`director_id`),
+  KEY `fk_movies_has_directors_movies1_idx` (`movie_id`),
+  CONSTRAINT `fk_movies_has_directors_directors1` FOREIGN KEY (`director_id`) REFERENCES `directors` (`director_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_movies_has_directors_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movies_directors`
+--
+
+LOCK TABLES `movies_directors` WRITE;
+/*!40000 ALTER TABLE `movies_directors` DISABLE KEYS */;
+INSERT INTO `movies_directors` VALUES (49,1),(3,2),(37,3),(56,4),(45,5),(47,6),(42,7),(43,8),(65,9),(58,10),(36,11),(40,12),(41,13),(60,14),(67,14),(4,15),(63,17),(39,18),(57,19),(59,20),(66,21),(62,22),(1,23),(35,24),(35,25),(44,26),(44,27),(46,28),(48,29),(50,30),(64,31),(64,32),(61,33),(61,34),(2,35),(38,36);
+/*!40000 ALTER TABLE `movies_directors` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `movies_genre`
+--
+
+DROP TABLE IF EXISTS `movies_genre`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `movies_genre` (
+  `movie_id` int(11) NOT NULL,
+  `genre_id` int(11) NOT NULL,
+  PRIMARY KEY (`movie_id`,`genre_id`),
+  KEY `fk_movies_has_genre_genre1_idx` (`genre_id`),
+  KEY `fk_movies_has_genre_movies1_idx` (`movie_id`),
+  CONSTRAINT `fk_movies_has_genre_genre1` FOREIGN KEY (`genre_id`) REFERENCES `genre` (`genre_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_movies_has_genre_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movies_genre`
+--
+
+LOCK TABLES `movies_genre` WRITE;
+/*!40000 ALTER TABLE `movies_genre` DISABLE KEYS */;
+INSERT INTO `movies_genre` VALUES (2,1),(38,1),(39,1),(40,1),(44,1),(45,1),(47,1),(56,1),(62,1),(63,1),(64,1),(65,1),(36,2),(38,2),(40,2),(43,2),(48,2),(56,2),(64,2),(1,3),(3,3),(35,3),(42,3),(45,3),(46,3),(61,3),(67,3),(44,4),(47,4),(61,4),(62,4),(2,5),(4,5),(36,5),(38,5),(41,5),(43,5),(48,5),(49,5),(50,5),(56,5),(57,5),(58,5),(59,5),(60,5),(63,5),(64,5),(65,5),(66,5),(1,6),(3,6),(35,6),(37,6),(43,6),(46,6),(60,6),(39,7),(42,7),(57,7),(66,7),(1,8),(3,8),(35,8),(37,8),(42,8),(45,8),(46,8),(47,8),(60,8),(61,8),(62,8),(67,8),(2,9),(4,10),(39,10),(50,10),(58,10),(63,10),(37,11),(67,11),(65,12);
+/*!40000 ALTER TABLE `movies_genre` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -238,7 +313,7 @@ CREATE TABLE `rental` (
   KEY `fk_rental_movies1_idx` (`movie_id`),
   CONSTRAINT `fk_rental_customers1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_rental_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,7 +322,7 @@ CREATE TABLE `rental` (
 
 LOCK TABLES `rental` WRITE;
 /*!40000 ALTER TABLE `rental` DISABLE KEYS */;
-INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3),(4,'2018-04-12','2018-04-16',1,'not returned in time',19,43),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35),(8,'2017-01-13','2017-10-19',1,'not returned in time',5,40),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37),(15,'2018-02-04','2018-03-12',1,'not returned in time',4,39),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41);
+INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3),(4,'2018-04-12','2018-04-16',1,'not returned in time',19,43),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35),(8,'2017-01-13','2017-10-19',1,'not returned in time',5,40),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37),(15,'2018-02-04','2018-03-12',1,'not returned in time',4,39),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41),(57,'2018-03-04','2018-03-19',1,'not returned in time',17,56),(58,'2018-04-03','2018-04-22',1,'not returned in time',18,57),(59,'2017-12-31','2018-01-07',1,'not returned in time',19,58),(60,'2018-01-01','2018-01-04',0,'returned in time',20,59),(61,'2018-03-01','2018-03-04',0,'returned in time',23,60),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61),(63,'2018-02-05','2018-02-09',0,'returned in time',30,62),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63),(65,'2018-02-05','2018-02-11',1,'not returned in time',33,64),(66,'2018-01-15','2018-01-23',1,'not returned in time',32,65),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56),(70,'2018-04-13','2018-04-20',1,'not returned in time',27,50),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42),(73,'2018-02-27','2018-03-03',0,'returned in time',30,41),(74,'2018-02-17','2018-02-19',0,'returned in time',33,4),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37),(76,'2018-02-17','2018-02-25',1,'not returned in time',31,39),(77,'2018-03-04','2018-03-15',1,'not returned in time',27,43),(78,'2018-01-31','2018-02-03',0,'returned in time',8,45);
 /*!40000 ALTER TABLE `rental` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -260,4 +335,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-03 13:54:48
+-- Dump completed on 2018-04-04 15:41:36
