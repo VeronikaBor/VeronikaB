@@ -16,7 +16,7 @@ SELECT * FROM movies_not_returned_in_time;
 
 -- Fråga 5: En lista över alla anställda och hur många filmer varje anställd har hyrt ut.
 
-SELECT * FROM products;
+SELECT * FROM totalrentedmovies_employees;
 
 -- Fråga 6: En lista med statistik över de mest uthyrda filmerna den senaste månaden. Se fråga 10.
 
