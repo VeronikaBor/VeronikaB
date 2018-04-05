@@ -182,11 +182,6 @@ INSERT INTO `genre` VALUES (1,'Comedy'),(2,'Romance'),(3,'Action'),(4,'Animation
 UNLOCK TABLES;
 
 --
-<<<<<<< .merge_file_a17504
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_a07840
 -- Temporary view structure for view `genre_movies`
 --
 
@@ -200,10 +195,6 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
-<<<<<<< .merge_file_a17504
->>>>>>> feature/task2_-_movie_genre
-=======
->>>>>>> .merge_file_a07840
 -- Temporary view structure for view `movie_collection`
 --
 
@@ -368,26 +359,6 @@ INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,
 UNLOCK TABLES;
 
 --
-<<<<<<< .merge_file_a17504
-<<<<<<< HEAD
-=======
-=======
--- Temporary view structure for view `rented_movies`
---
-
-DROP TABLE IF EXISTS `rented_movies`;
-/*!50001 DROP VIEW IF EXISTS `rented_movies`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `rented_movies` AS SELECT 
- 1 AS `Movies`,
- 1 AS `rentalDate`,
- 1 AS `Customer`,
- 1 AS `SalesPerson`*/;
-SET character_set_client = @saved_cs_client;
-
---
->>>>>>> .merge_file_a07840
 -- Final view structure for view `genre_movies`
 --
 
@@ -406,10 +377,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
-<<<<<<< .merge_file_a17504
->>>>>>> feature/task2_-_movie_genre
-=======
->>>>>>> .merge_file_a07840
 -- Final view structure for view `movie_collection`
 --
 
@@ -426,27 +393,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
-<<<<<<< .merge_file_a17504
-=======
-
---
--- Final view structure for view `rented_movies`
---
-
-/*!50001 DROP VIEW IF EXISTS `rented_movies`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `rented_movies` AS select `m`.`movieName` AS `Movies`,`r`.`rentalDate` AS `rentalDate`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer`,concat(`e`.`firstName`,' ',`e`.`lastName`) AS `SalesPerson` from (((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) join `employees` `e` on((`c`.`employees_id` = `e`.`employees_id`))) order by `m`.`movieName` */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
->>>>>>> .merge_file_a07840
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -457,12 +403,8 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< .merge_file_a17504
-<<<<<<< HEAD
+
 -- Dump completed on 2018-04-04 15:58:54
-=======
+
 -- Dump completed on 2018-04-04 16:46:04
->>>>>>> feature/task2_-_movie_genre
-=======
--- Dump completed on 2018-04-04 16:52:39
->>>>>>> .merge_file_a07840
+

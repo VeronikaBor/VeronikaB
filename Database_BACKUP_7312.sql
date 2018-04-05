@@ -182,11 +182,7 @@ INSERT INTO `genre` VALUES (1,'Comedy'),(2,'Romance'),(3,'Action'),(4,'Animation
 UNLOCK TABLES;
 
 --
-<<<<<<< .merge_file_a17504
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_a07840
+
 -- Temporary view structure for view `genre_movies`
 --
 
@@ -200,10 +196,6 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
-<<<<<<< .merge_file_a17504
->>>>>>> feature/task2_-_movie_genre
-=======
->>>>>>> .merge_file_a07840
 -- Temporary view structure for view `movie_collection`
 --
 
@@ -368,10 +360,7 @@ INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,
 UNLOCK TABLES;
 
 --
-<<<<<<< .merge_file_a17504
-<<<<<<< HEAD
-=======
-=======
+
 -- Temporary view structure for view `rented_movies`
 --
 
@@ -387,7 +376,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
->>>>>>> .merge_file_a07840
+
 -- Final view structure for view `genre_movies`
 --
 
@@ -406,10 +395,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
-<<<<<<< .merge_file_a17504
->>>>>>> feature/task2_-_movie_genre
-=======
->>>>>>> .merge_file_a07840
 -- Final view structure for view `movie_collection`
 --
 
@@ -426,8 +411,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
-<<<<<<< .merge_file_a17504
-=======
 
 --
 -- Final view structure for view `rented_movies`
@@ -446,7 +429,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
->>>>>>> .merge_file_a07840
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -457,12 +439,10 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< .merge_file_a17504
-<<<<<<< HEAD
+
 -- Dump completed on 2018-04-04 15:58:54
-=======
+
 -- Dump completed on 2018-04-04 16:46:04
->>>>>>> feature/task2_-_movie_genre
-=======
+
 -- Dump completed on 2018-04-04 16:52:39
->>>>>>> .merge_file_a07840
+
