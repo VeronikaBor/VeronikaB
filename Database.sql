@@ -223,6 +223,19 @@ INSERT INTO `instock` VALUES (1,1),(2,1),(3,1),(4,2),(5,2),(6,2),(7,3),(8,3),(9,
 UNLOCK TABLES;
 
 --
+-- Temporary view structure for view `most_rented_movies_last_month`
+--
+
+DROP TABLE IF EXISTS `most_rented_movies_last_month`;
+/*!50001 DROP VIEW IF EXISTS `most_rented_movies_last_month`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `most_rented_movies_last_month` AS SELECT 
+ 1 AS `Movies`,
+ 1 AS `NumberOfRentals`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Temporary view structure for view `movie_collection`
 --
 
@@ -450,6 +463,24 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `most_rented_movies_last_month`
+--
+
+/*!50001 DROP VIEW IF EXISTS `most_rented_movies_last_month`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `most_rented_movies_last_month` AS select `m`.`movieName` AS `Movies`,count(`m`.`movieName`) AS `NumberOfRentals` from (`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) where (`r`.`rentalDate` between '2018-03-04' and '2018-04-04') group by `m`.`movieName` order by `NumberOfRentals` desc limit 4 */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `movie_collection`
 --
 
@@ -530,4 +561,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-05 14:10:29
+-- Dump completed on 2018-04-05 14:15:02
