@@ -326,6 +326,21 @@ INSERT INTO `movies_genre` VALUES (2,1),(38,1),(39,1),(40,1),(44,1),(45,1),(47,1
 UNLOCK TABLES;
 
 --
+-- Temporary view structure for view `movies_not_returned_in_time`
+--
+
+DROP TABLE IF EXISTS `movies_not_returned_in_time`;
+/*!50001 DROP VIEW IF EXISTS `movies_not_returned_in_time`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `movies_not_returned_in_time` AS SELECT 
+ 1 AS `Movie`,
+ 1 AS `returnDate`,
+ 1 AS `comment`,
+ 1 AS `Customer`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `rental`
 --
 
@@ -410,6 +425,24 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `movies_not_returned_in_time`
+--
+
+/*!50001 DROP VIEW IF EXISTS `movies_not_returned_in_time`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `movies_not_returned_in_time` AS select `m`.`movieName` AS `Movie`,`r`.`returnDate` AS `returnDate`,`r`.`comment` AS `comment`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer` from ((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) where (`r`.`status` = 1) order by `r`.`returnDate` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `rented_movies`
 --
 
@@ -440,4 +473,7 @@ SET character_set_client = @saved_cs_client;
 
 -- Dump completed on 2018-04-04 16:46:04
 -- Dump completed on 2018-04-04 16:52:39
+
+
+-- Dump completed on 2018-04-04 17:01:50
 
