@@ -182,6 +182,25 @@ INSERT INTO `genre` VALUES (1,'Comedy'),(2,'Romance'),(3,'Action'),(4,'Animation
 UNLOCK TABLES;
 
 --
+-- Temporary view structure for view `movie_collection`
+--
+
+DROP TABLE IF EXISTS `movie_collection`;
+/*!50001 DROP VIEW IF EXISTS `movie_collection`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `movie_collection` AS SELECT 
+ 1 AS `movieName`,
+ 1 AS `releaseYear`,
+ 1 AS `Actors`,
+ 1 AS `Directors`,
+ 1 AS `Genre`,
+ 1 AS `description`,
+ 1 AS `rentalTime`,
+ 1 AS `inStock`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `movies`
 --
 
@@ -325,6 +344,24 @@ LOCK TABLES `rental` WRITE;
 INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3),(4,'2018-04-12','2018-04-16',1,'not returned in time',19,43),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35),(8,'2017-01-13','2017-10-19',1,'not returned in time',5,40),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37),(15,'2018-02-04','2018-03-12',1,'not returned in time',4,39),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41),(57,'2018-03-04','2018-03-19',1,'not returned in time',17,56),(58,'2018-04-03','2018-04-22',1,'not returned in time',18,57),(59,'2017-12-31','2018-01-07',1,'not returned in time',19,58),(60,'2018-01-01','2018-01-04',0,'returned in time',20,59),(61,'2018-03-01','2018-03-04',0,'returned in time',23,60),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61),(63,'2018-02-05','2018-02-09',0,'returned in time',30,62),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63),(65,'2018-02-05','2018-02-11',1,'not returned in time',33,64),(66,'2018-01-15','2018-01-23',1,'not returned in time',32,65),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56),(70,'2018-04-13','2018-04-20',1,'not returned in time',27,50),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42),(73,'2018-02-27','2018-03-03',0,'returned in time',30,41),(74,'2018-02-17','2018-02-19',0,'returned in time',33,4),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37),(76,'2018-02-17','2018-02-25',1,'not returned in time',31,39),(77,'2018-03-04','2018-03-15',1,'not returned in time',27,43),(78,'2018-01-31','2018-02-03',0,'returned in time',8,45);
 /*!40000 ALTER TABLE `rental` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Final view structure for view `movie_collection`
+--
+
+/*!50001 DROP VIEW IF EXISTS `movie_collection`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `movie_collection` AS select `m`.`movieName` AS `movieName`,`m`.`releaseYear` AS `releaseYear`,group_concat(distinct `a`.`firstName`,' ',`a`.`lastName` separator ', ') AS `Actors`,group_concat(distinct `d`.`firstName`,' ',`d`.`lastName` separator ', ') AS `Directors`,group_concat(distinct `g`.`genre` separator ' - ') AS `Genre`,`m`.`description` AS `description`,`m`.`rentalTime` AS `rentalTime`,`m`.`inStock` AS `inStock` from ((((((`movies` `m` join `movies_actors` `ma` on((`m`.`movie_id` = `ma`.`movie_id`))) join `actors` `a` on((`ma`.`actor_id` = `a`.`actor_id`))) join `movies_genre` `mg` on((`m`.`movie_id` = `mg`.`movie_id`))) join `genre` `g` on((`mg`.`genre_id` = `g`.`genre_id`))) join `movies_directors` `md` on((`m`.`movie_id` = `md`.`movie_id`))) join `directors` `d` on((`md`.`director_id` = `d`.`director_id`))) group by `m`.`movieName` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -335,4 +372,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-04 15:41:36
+-- Dump completed on 2018-04-04 15:58:54
