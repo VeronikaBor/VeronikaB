@@ -80,7 +80,7 @@ CREATE TABLE `customers` (
   `customer_id` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(45) NOT NULL,
   `lastName` varchar(45) NOT NULL,
-  `e-mail` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
   `phoneNumber` varchar(45) NOT NULL,
   `personalNumber` varchar(45) NOT NULL,
   `address_id` int(11) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE `customers` (
   KEY `fk_customers_employees1_idx` (`employees_id`),
   CONSTRAINT `fk_customers_address1` FOREIGN KEY (`address_id`) REFERENCES `address` (`address_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_customers_employees1` FOREIGN KEY (`employees_id`) REFERENCES `employees` (`employees_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Eva','Larsson','eva.larsson@gmail.com','070-6780943','760403-1978',3,5),(2,'Kalle','Svensson','kalle.svensson@gmail.com','070-5867403','550918-4502',19,3),(3,'Per','Larsson','per.lasson@hotmail.com','070-3209856','840310-3420',20,4),(4,'Stina','Andersson','stina.andersson@hotmail.com','070-0973415','620419-4501',26,7),(5,'David','Holmlund','david.holmlund@yahoo.com','070-3409863','790627-5038',23,9),(6,'Dennis','Granath','d.granath@office.se','070-3209865','940203-5749',24,6),(7,'Roger','Brunh','roger.b@telia.se','070-2109873','871130-2320',28,9),(8,'Jennifer','Jansson','jennifer.jansson@gmail.com','070-0033998','531231-1456',5,9),(9,'Annie','Öberg','a.oberg@hotmail.com','070-1086643','760826-4365',10,3),(10,'Anette','Öberg','nettan_o@mail.nu','070-2109810','840513-2425',6,5),(11,'Fredrik','Karlsson','karlsson86@gmail.com','070-0011338','860914-1013',6,5),(12,'Kim','Johansson','kimpa1975@hotmail.com','070-0984326','750302-1439',4,7),(13,'Lina','Johansson','linajohansson_76@yahoo.com','070-4397564','760914-5498',7,7),(14,'Lilian','Lundblad','lilian1963Lundblad@gmail.com','070-2340942','630124-2301',4,6),(15,'Gun','Ljungqvist','gunnsan74@mail.nu','073-2301435','741023-0931',15,9),(16,'Ingvar','Karlström','ingvar.karlström@gmail.com','073-0951437','701205-4078',15,4),(17,'Sanna','Muhic','sanna.muhic@hotmail.com','072-0998322','911004-5023',11,7),(18,'Mirza','Kalludra','Kalludra.m@gmail.com','072-4409493','920930-3402',3,9),(19,'Dino','Muhic','Dino1958@hotmail.com','070-4238972','580423-2454',11,4),(20,'Jessica','Danielsson','j.danielsson@outlook.se','073-5672898','930210-2426',29,5),(21,'Andreas','Svensson','andreas.svensson@yahoo.com','072-4560203','850315-4587',2,6),(22,'Lars','Fredriksson','lars.fredrik@hotmail.com','073-2357698','670516-3497',8,3),(23,'Denise','Hansson','denise_hansson@gmail.com','070-8904536','780402-0430',9,7),(24,'Anne','Karlberg','anne.karlberg@mail.com','070-4590323','891225-7803',12,9),(25,'Ronny','Otterborg','r_otterborg@hotmail.com','070-0034854','771030-3476',13,6),(26,'Tonny','Öberg','tonny83oberg@gmail.com','070-0312432','830808-4509',14,7),(27,'Christian','Sjöberg','christina_sjoberg@yahoo.se','070-3098565','730706-1023',16,9),(28,'Sara','Hjalmarsson','hjalmarsson76@gmail.com','070-2095463','761118-2309',17,3),(29,'Sophie','Kronlund','s_kronlund@hotmail.com','070-1005544','831113-2024',18,4),(30,'Isabelle','Börjesson','isabella84borjesson@gmail.com','070-9994599','710606-2026',21,5),(31,'Lovisa','Granqvist','lovisa.granqvist@mail.com','070-8833550','700123-2826',22,7),(32,'Frida','Ljungström','frida96ljungstrom@yahoo.com','070-7733254','680423-2628',25,9),(33,'Margareta','Scheelin','margareta.scheelin@hotmail.com','072-0123654','650914-2428',27,3);
+INSERT INTO `customers` VALUES (1,'Eva','Larsson','eva.larsson@gmail.com','070-6780943','760403-1978',3,5),(2,'Kalle','Svensson','k55svensson@mail.com','070-5867403','550918-4502',19,3),(3,'Per','Larsson','per.johansson@hotmail.com','070-3209856','840310-3420',20,4),(4,'Stina','Andersson','stina.A@gmail.com','070-0973415','620419-4501',26,7),(5,'David','Holmlund','david@mail.com','070-3409863','790627-5038',23,9),(6,'Dennis','Granath','d.granath@hotmail.com','070-3209865','940203-5749',24,6),(7,'Roger','Brunh','roger.brunh@gmail.com','070-2109873','871130-2320',28,9),(8,'Jennifer','Jansson','jennifer53jansson@yahoo.se','070-0033998','531231-1456',5,9),(9,'Annie','Öberg','Annie.oberg@gmail.se','070-1086643','760826-4365',10,3),(10,'Anette','Öberg','anette84oberg@mail.com','070-2109810','840513-2425',6,5),(11,'Fredrik','Karlsson','f.karlsson86@gmail.com','070-0011338','860914-1013',6,5),(12,'Kim','Johansson','kim75johansson@yahoo.com','070-0984326','750302-1439',4,7),(13,'Lina','Johansson','lina_johansson76@hotmail.com','070-4397564','760914-5498',7,7),(14,'Lilian','Lundblad','lundbladlilian@mail.com','070-2340942','630124-2301',4,6),(15,'Gun','Ljungqvist','ljungqvistG@gmail.com','073-2301435','741023-0931',15,9),(16,'Ingvar','Karlström','I70Karlstrom@gmail.com','073-0951437','701205-4078',15,4),(17,'Sanna','Muhic','Sanna_Muhic@hotmail.com','072-0998322','911004-5023',11,7),(18,'Mirza','Renolds','R92M@gmail.com','072-4409493','920930-3402',3,9),(19,'Dino','Stone','Muhic92S@gmail.com','070-4238972','580423-2454',11,4),(20,'Jessica','Danielsson','jessica_danielsson@gmail.com','073-5672898','930210-2426',29,5),(21,'Andreas','Svensson','andreas85svensson@hotmail.com','072-4560203','850315-4587',2,6),(22,'Lars','Fredriksson','lars.fredriksson@gmail.com','073-2357698','670516-3497',8,3),(23,'Denise','Hansson','denise.hansson@gmail.com','070-8904536','780402-0430',9,7),(24,'Anne','Karlberg','annekarlberg@hotmail.com','070-4590323','891225-7803',12,9),(25,'Ronny','Otterborg','otterborg77@gmail.com','070-0034854','771030-3476',13,6),(26,'Tonny','Öberg','tonny.oberg@hotmail.com','070-0312432','830808-4509',14,7),(27,'Christian','Sjöberg','christian.sjöberg@gmail.com','070-3098565','730706-1023',16,9),(28,'Sara','Hjalmarsson','hjalmarsson76@gmail.com','070-2095463','761118-2309',17,3),(29,'Sophie','Kronlund','sophie_kronlund@gmail.com','070-1005544','831113-2024',18,4),(30,'Isabelle','Börjesson','isabelle_börjesson@hotmail.com','070-9994599','710606-2026',21,5),(31,'Lovisa','Granqvist','granqvist70@mail.com','070-8833550','700123-2826',22,7),(32,'Frida','Ljungström','ljungstrom_frida@gmail.com','070-7733254','680423-2628',25,9),(33,'Margareta','Scheelin','Scheelin65@hotmail.com','072-0123654','650914-2428',27,3),(34,'Jan','Karlsson','Jan_Karlsson@gmail.com','070-4567890','940405-9786',16,7);
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,33 +193,33 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 /*!50001 CREATE VIEW `genre_movies` AS SELECT 
  1 AS `Genre`,
- 1 AS `Movies`*/;
+ 1 AS `movieName`*/;
 SET character_set_client = @saved_cs_client;
 
 --
--- Table structure for table `instock`
+-- Table structure for table `in_stock`
 --
 
-DROP TABLE IF EXISTS `instock`;
+DROP TABLE IF EXISTS `in_stock`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `instock` (
-  `inStock_id` int(11) NOT NULL,
+CREATE TABLE `in_stock` (
+  `in_stock_id` int(11) NOT NULL,
   `movie_id` int(11) NOT NULL,
-  PRIMARY KEY (`inStock_id`),
-  KEY `fk_inStock_movies1_idx` (`movie_id`),
-  CONSTRAINT `fk_inStock_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`in_stock_id`),
+  KEY `fk_in_stock_movies1_idx` (`movie_id`),
+  CONSTRAINT `fk_in_stock_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `instock`
+-- Dumping data for table `in_stock`
 --
 
-LOCK TABLES `instock` WRITE;
-/*!40000 ALTER TABLE `instock` DISABLE KEYS */;
-INSERT INTO `instock` VALUES (1,1),(2,1),(3,1),(4,2),(5,2),(6,2),(7,3),(8,3),(9,3),(10,3),(11,3),(12,3),(13,3),(14,3),(15,3),(16,3),(17,3),(18,4),(19,4),(20,4),(21,4),(22,4),(23,4),(24,4),(25,35),(26,35),(27,35),(28,35),(29,35),(30,36),(31,36),(32,36),(33,36),(34,36),(35,36),(36,36),(37,36),(38,36),(39,36),(40,36),(41,36),(42,36),(43,37),(44,37),(45,37),(46,37),(47,37),(48,37),(49,37),(50,37),(51,37),(52,37),(53,38),(54,38),(55,38),(56,38),(57,38),(58,38),(59,39),(60,39),(61,39),(62,39),(63,39),(64,39),(65,39),(66,40),(67,40),(68,40),(69,40),(70,41),(71,41),(72,41),(73,41),(74,41),(75,42),(76,42),(77,42),(78,42),(79,42),(80,42),(81,42),(82,43),(83,43),(84,43),(85,43),(86,43),(87,43),(88,43),(89,43),(90,43),(91,43),(92,43),(93,44),(94,44),(95,44),(96,44),(97,44),(98,45),(99,45),(100,45),(101,45),(102,45),(103,45),(104,45),(105,46),(106,46),(107,46),(108,46),(109,46),(110,46),(111,47),(112,47),(113,47),(114,47),(115,47),(116,47),(117,47),(118,48),(119,48),(120,48),(121,48),(122,48),(123,48),(124,48),(125,49),(126,49),(127,49),(128,49),(129,49),(130,49),(131,50),(132,50),(133,50),(134,50),(135,50),(136,50),(137,50),(138,50),(139,56),(140,56),(141,56),(142,56),(143,56),(144,57),(145,57),(146,57),(147,57),(148,57),(149,57),(150,57),(151,57),(152,58),(153,58),(154,58),(156,58),(157,58),(158,58),(159,59),(160,59),(161,60),(162,60),(163,60),(164,61),(165,61),(166,61),(167,61),(168,62),(169,62),(170,62),(171,62),(172,63),(173,63),(174,63),(175,63),(176,63),(177,63),(178,64),(179,64),(180,64),(181,64),(182,64),(183,64),(184,64),(185,65),(186,65),(187,65),(188,65),(189,65),(190,66),(191,66),(192,66),(193,66),(194,67),(195,67),(196,67),(197,67);
-/*!40000 ALTER TABLE `instock` ENABLE KEYS */;
+LOCK TABLES `in_stock` WRITE;
+/*!40000 ALTER TABLE `in_stock` DISABLE KEYS */;
+INSERT INTO `in_stock` VALUES (1,1),(2,1),(3,1),(4,1),(5,2),(6,2),(7,2),(8,3),(9,3),(10,3),(11,3),(12,3),(13,3),(14,4),(15,4),(16,35),(17,35),(18,36),(19,36),(20,37),(21,37),(22,38),(23,38),(24,39),(25,39),(26,40),(27,40),(28,41),(29,41),(30,42),(31,42),(32,43),(33,43),(34,44),(35,44),(36,45),(37,45),(38,46),(39,46),(40,47),(41,47),(42,48),(43,48),(44,49),(45,49),(46,50),(47,50),(48,56),(49,56),(50,57),(51,57),(52,58),(53,58),(54,59),(55,59),(56,60),(57,60),(58,61),(59,61),(60,61),(61,62),(62,62),(63,62),(64,63),(65,63),(66,64),(67,64),(68,65),(69,65),(70,66),(71,66),(72,67),(73,67);
+/*!40000 ALTER TABLE `in_stock` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -373,7 +373,8 @@ DROP TABLE IF EXISTS `movies_not_returned_in_time`;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 /*!50001 CREATE VIEW `movies_not_returned_in_time` AS SELECT 
- 1 AS `Movie`,
+ 1 AS `movieName`,
+ 1 AS `rentalDate`,
  1 AS `returnDate`,
  1 AS `comment`,
  1 AS `Customer`*/;
@@ -394,15 +395,15 @@ CREATE TABLE `rental` (
   `comment` varchar(45) DEFAULT NULL,
   `customer_id` int(11) NOT NULL,
   `movie_id` int(11) NOT NULL,
-  `inStock_id` int(11) NOT NULL,
+  `in_stock_id` int(11) NOT NULL,
   PRIMARY KEY (`rental_id`),
   KEY `fk_rental_customers1_idx` (`customer_id`),
   KEY `fk_rental_movies1_idx` (`movie_id`),
-  KEY `fk_rental_inStock1_idx` (`inStock_id`),
+  KEY `fk_rental_in_stock1_idx` (`in_stock_id`),
   CONSTRAINT `fk_rental_customers1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_rental_inStock1` FOREIGN KEY (`inStock_id`) REFERENCES `instock` (`inStock_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_rental_in_stock1` FOREIGN KEY (`in_stock_id`) REFERENCES `in_stock` (`in_stock_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_rental_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -411,7 +412,7 @@ CREATE TABLE `rental` (
 
 LOCK TABLES `rental` WRITE;
 /*!40000 ALTER TABLE `rental` DISABLE KEYS */;
-INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38,53),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36,30),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3,7),(4,'2018-04-12',NULL,1,'not returned in time',19,43,82),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50,131),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2,4),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35,25),(8,'2017-01-13',NULL,1,'not returned in time',5,40,66),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41,70),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48,118),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49,125),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39,59),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37,43),(15,'2018-04-04',NULL,1,'not returned in time',4,3,8),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41,71),(57,'2018-03-04','2018-03-15',1,'not returned in time',17,56,139),(58,'2018-04-03','2018-04-07',1,'not returned in time',18,57,144),(59,'2017-12-31',NULL,1,'not returned in time',19,58,152),(60,'2018-04-01','2018-04-04',0,'returned in time',20,59,159),(61,'2018-03-01','2018-03-04',0,'returned in time',23,3,9),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61,164),(63,'2018-03-05','2018-03-09',0,'returned in time',30,3,10),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63,172),(65,'2018-02-05',NULL,1,'not returned in time',33,64,178),(66,'2018-01-15',NULL,1,'not returned in time',32,65,185),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66,190),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67,194),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56,140),(70,'2018-04-13','2018-05-01',1,'not returned in time',27,50,132),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43,83),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42,75),(73,'2018-02-27','2018-03-03',0,'returned in time',30,41,72),(74,'2018-03-17','2018-03-19',0,'returned in time',33,3,11),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37,44),(76,'2018-03-17','2018-04-01',1,'not returned in time',31,39,60),(77,'2018-03-04',NULL,1,'not returned in time',27,43,84),(78,'2018-03-31','2018-04-03',0,'returned in time',8,45,98);
+INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38,22),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36,18),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3,8),(4,'2018-04-12',NULL,1,'not returned in time',19,43,32),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50,46),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2,5),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35,16),(8,'2017-01-13',NULL,1,'not returned in time',5,40,26),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41,28),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48,42),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49,44),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39,24),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37,20),(15,'2018-04-04',NULL,1,'not returned in time',4,3,9),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41,29),(57,'2018-03-04','2018-03-15',1,'not returned in time',17,56,48),(58,'2018-04-03','2018-04-07',1,'not returned in time',18,57,50),(59,'2017-12-31',NULL,1,'not returned in time',19,58,52),(60,'2018-04-01','2018-04-04',0,'returned in time',20,59,54),(61,'2018-03-01','2018-03-04',0,'returned in time',23,3,10),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61,58),(63,'2018-03-05','2018-03-09',0,'returned in time',30,3,11),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63,64),(65,'2018-02-05',NULL,1,'not returned in time',33,64,66),(66,'2018-01-15',NULL,1,'not returned in time',32,65,68),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66,70),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67,72),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56,49),(70,'2018-04-13','2018-05-01',1,'not returned in time',27,50,47),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43,33),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42,30),(73,'2018-02-27','2018-03-03',0,'returned in time',30,62,61),(74,'2018-03-17','2018-03-19',0,'returned in time',33,3,12),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37,21),(76,'2018-03-17','2018-04-01',1,'not returned in time',31,39,25),(77,'2018-03-04',NULL,1,'not returned in time',27,44,34),(78,'2018-03-31','2018-04-03',0,'returned in time',8,45,36),(110,'2018-01-01',NULL,2,'not ready to return',7,38,23),(111,'2018-04-07',NULL,2,'not ready to return',11,43,32),(112,'2018-04-07',NULL,2,'not ready to return',10,65,69),(114,'2018-04-07',NULL,2,'not ready to return',14,1,3),(116,'2018-04-07',NULL,2,'not ready to return',10,65,69),(117,'2018-04-07',NULL,2,'not ready to return',26,49,44),(118,'2018-04-07',NULL,2,'not ready to return',24,48,42);
 /*!40000 ALTER TABLE `rental` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -424,7 +425,7 @@ DROP TABLE IF EXISTS `rented_movies`;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 /*!50001 CREATE VIEW `rented_movies` AS SELECT 
- 1 AS `Movies`,
+ 1 AS `movieName`,
  1 AS `rentalDate`,
  1 AS `Customer`,
  1 AS `SalesPerson`*/;
@@ -457,7 +458,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `genre_movies` AS select `g`.`genre` AS `Genre`,group_concat(`m`.`movieName` separator ' - ') AS `Movies` from ((`genre` `g` join `movies_genre` `mg` on((`g`.`genre_id` = `mg`.`genre_id`))) join `movies` `m` on((`mg`.`movie_id` = `m`.`movie_id`))) group by `g`.`genre` */;
+/*!50001 VIEW `genre_movies` AS select `g`.`genre` AS `Genre`,group_concat(`m`.`movieName`,' ' separator ', ') AS `movieName` from ((`genre` `g` join `movies_genre` `mg` on((`g`.`genre_id` = `mg`.`genre_id`))) join `movies` `m` on((`mg`.`movie_id` = `m`.`movie_id`))) group by `g`.`genre` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -475,7 +476,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `most_rented_movies_last_month` AS select `m`.`movieName` AS `Movies`,count(`m`.`movieName`) AS `NumberOfRentals` from (`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) where (`r`.`rentalDate` between '2018-03-04' and '2018-04-04') group by `m`.`movieName` order by `NumberOfRentals` desc limit 4 */;
+/*!50001 VIEW `most_rented_movies_last_month` AS select `m`.`movieName` AS `Movies`,count(`m`.`movieName`) AS `NumberOfRentals` from (`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) where (`r`.`rentalDate` between '2018-03-04' and '2018-04-04') group by `m`.`movieName` order by `NumberOfRentals` desc limit 5 */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -493,7 +494,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `movie_collection` AS select `m`.`movieName` AS `movieName`,`m`.`releaseYear` AS `releaseYear`,group_concat(distinct `a`.`firstName`,' ',`a`.`lastName` separator ', ') AS `Actors`,group_concat(distinct `d`.`firstName`,' ',`d`.`lastName` separator ', ') AS `Directors`,group_concat(distinct `g`.`genre` separator ' - ') AS `Genre`,`m`.`description` AS `description`,`m`.`rentalTime` AS `rentalTime` from ((((((`movies` `m` join `movies_actors` `ma` on((`m`.`movie_id` = `ma`.`movie_id`))) join `actors` `a` on((`ma`.`actor_id` = `a`.`actor_id`))) join `movies_genre` `mg` on((`m`.`movie_id` = `mg`.`movie_id`))) join `genre` `g` on((`mg`.`genre_id` = `g`.`genre_id`))) join `movies_directors` `md` on((`m`.`movie_id` = `md`.`movie_id`))) join `directors` `d` on((`md`.`director_id` = `d`.`director_id`))) group by `m`.`movieName` */;
+/*!50001 VIEW `movie_collection` AS select `m`.`movieName` AS `movieName`,`m`.`releaseYear` AS `releaseYear`,group_concat(distinct `a`.`firstName`,' ',`a`.`lastName` separator ',') AS `Actors`,group_concat(distinct `d`.`firstName`,' ',`d`.`lastName` separator ',') AS `Directors`,group_concat(distinct `g`.`genre` separator ',') AS `Genre`,`m`.`description` AS `description`,`m`.`rentalTime` AS `rentalTime` from ((((((`movies` `m` join `movies_actors` `ma` on((`m`.`movie_id` = `ma`.`movie_id`))) join `actors` `a` on((`ma`.`actor_id` = `a`.`actor_id`))) join `movies_genre` `mg` on((`m`.`movie_id` = `mg`.`movie_id`))) join `genre` `g` on((`mg`.`genre_id` = `g`.`genre_id`))) join `movies_directors` `md` on((`m`.`movie_id` = `md`.`movie_id`))) join `directors` `d` on((`md`.`director_id` = `d`.`director_id`))) group by `m`.`movieName` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -511,7 +512,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `movies_not_returned_in_time` AS select `m`.`movieName` AS `Movie`,`r`.`returnDate` AS `returnDate`,`r`.`comment` AS `comment`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer` from ((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) where (`r`.`status` = 1) order by `r`.`returnDate` */;
+/*!50001 VIEW `movies_not_returned_in_time` AS select `m`.`movieName` AS `movieName`,`r`.`rentalDate` AS `rentalDate`,`r`.`returnDate` AS `returnDate`,`r`.`comment` AS `comment`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer` from ((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) where (`r`.`status` = 1) order by `r`.`returnDate` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -529,7 +530,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `rented_movies` AS select `m`.`movieName` AS `Movies`,`r`.`rentalDate` AS `rentalDate`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer`,concat(`e`.`firstName`,' ',`e`.`lastName`) AS `SalesPerson` from (((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) join `employees` `e` on((`c`.`employees_id` = `e`.`employees_id`))) order by `m`.`movieName` */;
+/*!50001 VIEW `rented_movies` AS select `m`.`movieName` AS `movieName`,`r`.`rentalDate` AS `rentalDate`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer`,concat(`e`.`firstName`,' ',`e`.`lastName`) AS `SalesPerson` from (((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) join `employees` `e` on((`c`.`employees_id` = `e`.`employees_id`))) order by `m`.`movieName` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -561,4 +562,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-05 14:15:02
+-- Dump completed on 2018-04-07 22:55:09
