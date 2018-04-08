@@ -231,7 +231,7 @@ DROP TABLE IF EXISTS `most_rented_movies_last_month`;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 /*!50001 CREATE VIEW `most_rented_movies_last_month` AS SELECT 
- 1 AS `Movies`,
+ 1 AS `movieName`,
  1 AS `NumberOfRentals`*/;
 SET character_set_client = @saved_cs_client;
 
@@ -403,7 +403,7 @@ CREATE TABLE `rental` (
   CONSTRAINT `fk_rental_customers1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_rental_in_stock1` FOREIGN KEY (`in_stock_id`) REFERENCES `in_stock` (`in_stock_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_rental_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -412,7 +412,7 @@ CREATE TABLE `rental` (
 
 LOCK TABLES `rental` WRITE;
 /*!40000 ALTER TABLE `rental` DISABLE KEYS */;
-INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38,22),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36,18),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3,8),(4,'2018-04-12',NULL,1,'not returned in time',19,43,32),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50,46),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2,5),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35,16),(8,'2017-01-13',NULL,1,'not returned in time',5,40,26),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41,28),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48,42),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49,44),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39,24),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37,20),(15,'2018-04-04',NULL,1,'not returned in time',4,3,9),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41,29),(57,'2018-03-04','2018-03-15',1,'not returned in time',17,56,48),(58,'2018-04-03','2018-04-07',1,'not returned in time',18,57,50),(59,'2017-12-31',NULL,1,'not returned in time',19,58,52),(60,'2018-04-01','2018-04-04',0,'returned in time',20,59,54),(61,'2018-03-01','2018-03-04',0,'returned in time',23,3,10),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61,58),(63,'2018-03-05','2018-03-09',0,'returned in time',30,3,11),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63,64),(65,'2018-02-05',NULL,1,'not returned in time',33,64,66),(66,'2018-01-15',NULL,1,'not returned in time',32,65,68),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66,70),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67,72),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56,49),(70,'2018-04-13','2018-05-01',1,'not returned in time',27,50,47),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43,33),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42,30),(73,'2018-02-27','2018-03-03',0,'returned in time',30,62,61),(74,'2018-03-17','2018-03-19',0,'returned in time',33,3,12),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37,21),(76,'2018-03-17','2018-04-01',1,'not returned in time',31,39,25),(77,'2018-03-04',NULL,1,'not returned in time',27,44,34),(78,'2018-03-31','2018-04-03',0,'returned in time',8,45,36),(110,'2018-01-01',NULL,2,'not ready to return',7,38,23),(111,'2018-04-07',NULL,2,'not ready to return',11,43,32),(112,'2018-04-07',NULL,2,'not ready to return',10,65,69),(114,'2018-04-07',NULL,2,'not ready to return',14,1,3),(116,'2018-04-07',NULL,2,'not ready to return',10,65,69),(117,'2018-04-07',NULL,2,'not ready to return',26,49,44),(118,'2018-04-07',NULL,2,'not ready to return',24,48,42);
+INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38,22),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36,18),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3,8),(4,'2018-04-12',NULL,1,'not returned in time',19,43,32),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50,46),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2,5),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35,16),(8,'2017-01-13',NULL,1,'not returned in time',5,40,26),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41,28),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48,42),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49,44),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39,24),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37,20),(15,'2018-04-04',NULL,1,'not returned in time',4,3,9),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41,29),(57,'2018-03-04','2018-03-15',1,'not returned in time',17,56,48),(58,'2018-04-03','2018-04-07',1,'not returned in time',18,57,50),(59,'2017-12-31',NULL,1,'not returned in time',19,58,52),(60,'2018-04-01','2018-04-04',0,'returned in time',20,59,54),(61,'2018-03-01','2018-03-04',0,'returned in time',23,3,10),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61,58),(63,'2018-03-05','2018-03-09',0,'returned in time',30,3,11),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63,64),(65,'2018-02-05',NULL,1,'not returned in time',33,64,66),(66,'2018-01-15',NULL,1,'not returned in time',32,65,68),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66,70),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67,72),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56,49),(70,'2018-04-13','2018-05-01',1,'not returned in time',27,50,47),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43,33),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42,30),(73,'2018-02-27','2018-03-03',0,'returned in time',30,62,61),(74,'2018-03-17','2018-03-19',0,'returned in time',33,3,12),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37,21),(76,'2018-03-17','2018-04-01',1,'not returned in time',31,39,25),(77,'2018-03-04',NULL,1,'not returned in time',27,44,34),(78,'2018-03-31','2018-04-03',0,'returned in time',8,45,36),(119,'2018-04-08',NULL,2,'not ready to return',7,38,23),(120,'2018-04-08','2018-04-14',1,'not returned in time',11,43,32),(121,'2018-04-08','2018-04-10',0,'returned in time',10,65,69),(122,'2018-04-08',NULL,2,'not ready to return',14,1,3),(123,'2018-04-06',NULL,2,'not ready to return',26,49,44),(124,'2018-04-08',NULL,2,'not ready to return',24,48,42);
 /*!40000 ALTER TABLE `rental` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -476,7 +476,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `most_rented_movies_last_month` AS select `m`.`movieName` AS `Movies`,count(`m`.`movieName`) AS `NumberOfRentals` from (`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) where (`r`.`rentalDate` between '2018-03-04' and '2018-04-04') group by `m`.`movieName` order by `NumberOfRentals` desc limit 5 */;
+/*!50001 VIEW `most_rented_movies_last_month` AS select `m`.`movieName` AS `movieName`,count(`i`.`movie_id`) AS `NumberOfRentals` from ((`rental` `r` join `in_stock` `i` on((`r`.`in_stock_id` = `i`.`in_stock_id`))) join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) where (`r`.`rentalDate` between '2018-03-04' and '2018-04-04') group by `m`.`movieName` order by `NumberOfRentals` desc limit 5 */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -562,4 +562,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-07 22:55:09
+-- Dump completed on 2018-04-08 20:41:31
