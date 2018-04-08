@@ -403,7 +403,7 @@ CREATE TABLE `rental` (
   CONSTRAINT `fk_rental_customers1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_rental_in_stock1` FOREIGN KEY (`in_stock_id`) REFERENCES `in_stock` (`in_stock_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_rental_movies1` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=126 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -412,7 +412,7 @@ CREATE TABLE `rental` (
 
 LOCK TABLES `rental` WRITE;
 /*!40000 ALTER TABLE `rental` DISABLE KEYS */;
-INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38,22),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36,18),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3,8),(4,'2018-04-12',NULL,1,'not returned in time',19,43,32),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50,46),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2,5),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35,16),(8,'2017-01-13',NULL,1,'not returned in time',5,40,26),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41,28),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48,42),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49,44),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39,24),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37,20),(15,'2018-04-04',NULL,1,'not returned in time',4,3,9),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41,29),(57,'2018-03-04','2018-03-15',1,'not returned in time',17,56,48),(58,'2018-04-03','2018-04-07',1,'not returned in time',18,57,50),(59,'2017-12-31',NULL,1,'not returned in time',19,58,52),(60,'2018-04-01','2018-04-04',0,'returned in time',20,59,54),(61,'2018-03-01','2018-03-04',0,'returned in time',23,3,10),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61,58),(63,'2018-03-05','2018-03-09',0,'returned in time',30,3,11),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63,64),(65,'2018-02-05',NULL,1,'not returned in time',33,64,66),(66,'2018-01-15',NULL,1,'not returned in time',32,65,68),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66,70),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67,72),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56,49),(70,'2018-04-13','2018-05-01',1,'not returned in time',27,50,47),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43,33),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42,30),(73,'2018-02-27','2018-03-03',0,'returned in time',30,62,61),(74,'2018-03-17','2018-03-19',0,'returned in time',33,3,12),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37,21),(76,'2018-03-17','2018-04-01',1,'not returned in time',31,39,25),(77,'2018-03-04',NULL,1,'not returned in time',27,44,34),(78,'2018-03-31','2018-04-03',0,'returned in time',8,45,36),(119,'2018-04-08',NULL,2,'not ready to return',7,38,23),(120,'2018-04-08','2018-04-14',1,'not returned in time',11,43,32),(121,'2018-04-08','2018-04-10',0,'returned in time',10,65,69),(122,'2018-04-08',NULL,2,'not ready to return',14,1,3),(123,'2018-04-06',NULL,2,'not ready to return',26,49,44),(124,'2018-04-08',NULL,2,'not ready to return',24,48,42);
+INSERT INTO `rental` VALUES (1,'2017-09-01','2017-09-05',0,'returned in time',8,38,22),(2,'2018-01-03','2018-04-12',1,'not returned in time',10,36,18),(3,'2018-03-05','2018-03-09',0,'returned in time',14,3,8),(4,'2018-04-12',NULL,1,'not returned in time',19,43,32),(5,'2018-01-06','2018-01-10',0,'returned in time',3,50,46),(6,'2018-01-06','2018-01-20',1,'not returned in time',3,2,5),(7,'2017-10-13','2017-10-19',1,'not returned in time',5,35,16),(8,'2017-01-13','2018-04-08',1,'not returned in time',5,40,26),(9,'2017-11-01','2017-11-05',0,'returned in time',9,41,28),(10,'2017-11-23','2017-11-27',0,'returned in time',11,1,1),(11,'2018-02-03','2018-02-07',0,'returned in time',11,48,42),(12,'2018-02-15','2018-02-19',0,'returned in time',15,49,44),(13,'2018-03-23','2018-03-27',0,'returned in time',1,39,24),(14,'2018-03-08','2018-03-12',0,'returned in time',2,37,20),(15,'2018-04-04',NULL,1,'not returned in time',4,3,9),(16,'2018-01-24','2018-01-28',0,'returned in time',4,41,29),(57,'2018-03-04','2018-03-15',1,'not returned in time',17,56,48),(58,'2018-04-03','2018-04-07',1,'not returned in time',18,57,50),(59,'2017-12-31',NULL,1,'not returned in time',19,58,52),(60,'2018-04-01','2018-04-04',0,'returned in time',20,59,54),(61,'2018-03-01','2018-03-04',0,'returned in time',23,3,10),(62,'2018-02-03','2018-02-07',0,'returned in time',22,61,58),(63,'2018-03-05','2018-03-09',0,'returned in time',30,3,11),(64,'2018-01-13','2018-01-17',0,'returned in time',31,63,64),(65,'2018-02-05',NULL,1,'not returned in time',33,64,66),(66,'2018-01-15',NULL,1,'not returned in time',32,65,68),(67,'2018-01-04','2018-01-08',0,'returned in time',25,66,70),(68,'2018-03-04','2018-03-08',0,'returned in time',26,67,72),(69,'2018-04-04','2018-04-08',0,'returned in time',29,56,49),(70,'2018-04-13','2018-05-01',1,'not returned in time',27,50,47),(71,'2018-04-01','2018-04-04',0,'returned in time',5,43,33),(72,'2018-03-31','2018-04-03',0,'returned in time',10,42,30),(73,'2018-02-27','2018-03-03',0,'returned in time',30,62,61),(74,'2018-03-17','2018-03-19',0,'returned in time',33,3,12),(75,'2018-03-03','2018-03-05',0,'returned in time',32,37,21),(76,'2018-03-17','2018-04-01',1,'not returned in time',31,39,25),(77,'2018-03-04',NULL,1,'not returned in time',27,44,34),(78,'2018-03-31','2018-04-03',0,'returned in time',8,45,36),(119,'2018-04-08','2018-04-14',0,'returned in time',7,38,23),(120,'2018-04-08','2018-04-14',1,'not returned in time',11,43,32),(121,'2018-04-08','2018-04-10',0,'returned in time',10,65,69),(122,'2018-04-08','2018-04-08',0,'returned in time',14,1,3),(123,'2018-04-06',NULL,2,'not ready to return',26,49,44),(124,'2018-04-08',NULL,2,'not ready to return',24,48,42),(125,'2018-04-08',NULL,2,'not ready to return',33,47,41);
 /*!40000 ALTER TABLE `rental` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -444,6 +444,133 @@ SET character_set_client = utf8;
  1 AS `jobtitle`,
  1 AS `TotalRentedMovies`*/;
 SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping routines for database 'veronikab'
+--
+/*!50003 DROP FUNCTION IF EXISTS `ReturedToLateOrNotAtAll_TrueOrFalse` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `ReturedToLateOrNotAtAll_TrueOrFalse`(
+rental_date date) RETURNS varchar(5) CHARSET utf8
+BEGIN
+
+Declare status_value varchar(45);
+
+IF now() > rental_date + interval 4 day THEN SET status_value = 'TRUE';
+ELSE IF now() <= rental_date + interval 4 day THEN SET status_value = 'FALSE';
+END IF;
+END IF;
+
+RETURN status_value;
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `ReturedToLate_TrueOrFalse` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `ReturedToLate_TrueOrFalse`(
+rental_date date) RETURNS varchar(5) CHARSET utf8
+BEGIN
+
+Declare status_value varchar(45);
+
+IF now() > rental_date + interval 4 day THEN SET status_value = 'TRUE';
+ELSE IF now() <= rental_date + interval 4 day THEN SET status_value = 'FALSE';
+END IF;
+END IF;
+
+RETURN status_value;
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `movie_returned` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `movie_returned`(
+IN r_rental_id int,
+IN r_status int,
+r_comment varchar(45),
+OUT ArrivedLate varchar(45)
+)
+BEGIN
+
+UPDATE rental 
+SET status = r_status,
+	comment = r_comment
+WHERE rental_id = r_rental_id;
+
+SELECT ReturedToLateOrNotAtAll_TrueOrFalse(rentalDate)
+	INTO ArrivedLate FROM rental
+    WHERE rental_id = r_rental_id;
+
+    
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `new_rental` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `new_rental`(
+IN r_rentalDate date,
+IN r_status int,
+IN r_comment varchar(45),
+IN r_customer_id int,
+IN r_movie_id int,
+IN in_stock_id int
+)
+BEGIN
+
+INSERT INTO rental (rentalDate, status, comment, customer_id, movie_id, in_stock_id) 
+			values (r_rentalDate, r_status, r_comment, r_customer_id, r_movie_id, in_stock_id);
+SELECT CONCAT(c.firstName, ' ', c.lastName) AS Customer, c.phoneNumber, c.email, m.movieName AS Movie
+FROM customers c, movies m WHERE customer_id = r_customer_id AND movie_id = r_movie_id;
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Final view structure for view `genre_movies`
@@ -512,7 +639,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `movies_not_returned_in_time` AS select `m`.`movieName` AS `movieName`,`r`.`rentalDate` AS `rentalDate`,`r`.`returnDate` AS `returnDate`,`r`.`comment` AS `comment`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer` from ((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) where (`r`.`status` = 1) order by `r`.`returnDate` */;
+/*!50001 VIEW `movies_not_returned_in_time` AS select `m`.`movieName` AS `movieName`,`r`.`rentalDate` AS `rentalDate`,`r`.`returnDate` AS `returnDate`,`r`.`comment` AS `comment`,concat(`c`.`firstName`,' ',`c`.`lastName`) AS `Customer` from ((`rental` `r` join `movies` `m` on((`r`.`movie_id` = `m`.`movie_id`))) join `customers` `c` on((`r`.`customer_id` = `c`.`customer_id`))) where ((`r`.`status` = 1) and isnull(`r`.`returnDate`)) order by `r`.`rentalDate` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -562,4 +689,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-08 20:41:31
+-- Dump completed on 2018-04-08 22:00:01
