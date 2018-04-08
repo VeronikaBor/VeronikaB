@@ -29,7 +29,7 @@ CALL new_rental(now(), 2, 'not ready to return', 6,38,22);
 -- Fråga 8: Gör en funktion som tar en film som parameter och returnerar olika värden beroende på om filmen är sent inlämnad eller inte. Dvs, om du matar in film nr 345 ska du få tillbaka TRUE om filmen är uthyrd men borde vara tillbakalämnad, annars FALSE. (1 och 0 funkar också om det är lättare.)
 
 SELECT r.rental_id, r.rentalDate, r.returnDate, r.customer_id, 
-r.movie_id, ReturedToLate_TrueOrFalse(rentalDate) AS ReturnedLate
+r.movie_id, ReturedToLateOrNotAtAll_TrueOrFalse(rentalDate) AS ReturnedLate
 FROM rental r
 WHERE r.movie_id = 49 AND returnDate IS NULL
 GROUP BY rental_id;
